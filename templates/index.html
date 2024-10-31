@@ -30,9 +30,9 @@
                 <p class="text-center text-2xl">{{s_verb}}</p>
                 <hr class="border-black"/>
                 {% for subject in list1  %}
-                <div class="flex justify-between mt-2">
-                    <p class="pt-2">{{subject}}</p>
-                    <p class="pt-2 flex items-end overflow-hidden">_____________</p>
+                <div class="grid grid-cols-6 mt-2">
+                    <p class="col-span-2 pt-2">{{subject}}</p>
+                    <p class="col-span-4 pt-2 flex justify-end items-end overflow-hidden">_____________</p>
                 </div>
                 {% endfor %}
             </div>
@@ -40,9 +40,9 @@
                 <p class="text-center text-2xl">{{es_verb}}</p>
                 <hr class="border-black"/>
                 {% for subject in list2  %}
-                <div class="flex justify-between mt-2">
-                    <p class="pt-2">{{subject}}</p>
-                    <p class="pt-2 flex items-end overflow-hidden">_____________</p>
+                <div class="grid grid-cols-6 mt-2">
+                    <p class="col-span-2 pt-2">{{subject}}</p>
+                    <p class="col-span-4 pt-2 flex justify-end items-end overflow-hidden">_____________</p>
                 </div>
                 {% endfor %}
             </div>
@@ -50,9 +50,9 @@
                 <p class="text-center text-2xl">{{ies_verb}}</p>
                 <hr class="border-black"/>
                 {% for subject in list3  %}
-                <div class="flex justify-between mt-2">
-                    <p class="pt-2">{{subject}}</p>
-                    <p class="pt-2 flex items-end overflow-hidden">_____________</p>
+                <div class="grid grid-cols-6 mt-2">
+                    <p class="col-span-2 pt-2">{{subject}}</p>
+                    <p class="col-span-4 pt-2 flex justify-end items-end overflow-hidden">_____________</p>
                 </div>
                 {% endfor %}         
             </div>
