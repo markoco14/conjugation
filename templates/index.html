@@ -8,42 +8,55 @@
         <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
         <style>
             body {
-                font-family: 'Lexend';font-size: 22px;
+                font-family: 'Lexend';
+                font-size: 22px;
             }
         </style>
     </head>
-    <body>
-        <div class="w-[297mm] h-[210mm] mx-auto">
-            <h1 class="text-4xl text-center mb-8">Change the Verb Practice</h1>
-            <div class="grid grid-cols-3 gap-x-2 items-stretch">
-                <div class="grow">
-                    <p class="text-center text-2xl border-b-2">{{s_verb}}</p>
-                    {% for subject in list1  %}
-                    <div class="grid grid-cols-5 pt-2">
-                        <p class="col-span-2 py-2">{{subject}}</p>
-                        <p class="col-span-3 flex items-end overflow-hidden p-2">_____________</p>
-                    </div>
-                    {% endfor %}
+    <body class="bg-gray-300 p-8">
+    <div class="bg-white w-[297mm] h-[210mm] mx-auto px-8 py-8 overflow-none">
+        {# header #}
+        <header class="flex justify-between mt-8 mb-8">
+            <div class="flex gap-8">
+                <p>Name: ___________</p>
+                <p>Date: ______________________</p>
+            </div>
+            <p>Level: ____</p>
+        </header>
+        {# content #}
+        <h1 class="text-4xl text-center mb-8">Change the Verb Practice</h1>
+        <div class="grid grid-cols-3 gap-x-8 items-stretch">
+            <div class="grow">
+                <p class="text-center text-2xl">{{s_verb}}</p>
+                <hr class="border-black"/>
+                {% for subject in list1  %}
+                <div class="flex justify-between mt-2">
+                    <p class="pt-2">{{subject}}</p>
+                    <p class="pt-2 flex items-end overflow-hidden">_____________</p>
                 </div>
-                <div class="grow">
-                    <p class="text-center text-2xl border-b-2">{{es_verb}}</p>
-                    {% for subject in list2  %}
-                    <div class="grid grid-cols-5 pt-2">
-                        <p class="col-span-2 py-2">{{subject}}</p>
-                        <p class="col-span-3 flex items-end overflow-hidden p-2">_____________</p>
-                    </div>
-                    {% endfor %}
+                {% endfor %}
+            </div>
+            <div class="grow">
+                <p class="text-center text-2xl">{{es_verb}}</p>
+                <hr class="border-black"/>
+                {% for subject in list2  %}
+                <div class="flex justify-between mt-2">
+                    <p class="pt-2">{{subject}}</p>
+                    <p class="pt-2 flex items-end overflow-hidden">_____________</p>
                 </div>
-                <div class="grow">
-                    <p class="text-center text-2xl border-b-2">{{ies_verb}}</p>
-                    {% for subject in list3  %}
-                    <div class="grid grid-cols-5 pt-2">
-                        <p class="col-span-2 py-2">{{subject}}</p>
-                        <p class="col-span-3 flex items-end overflow-hidden p-2">_____________</p>
-                    </div>
-                    {% endfor %}         
+                {% endfor %}
+            </div>
+            <div class="grow">
+                <p class="text-center text-2xl">{{ies_verb}}</p>
+                <hr class="border-black"/>
+                {% for subject in list3  %}
+                <div class="flex justify-between mt-2">
+                    <p class="pt-2">{{subject}}</p>
+                    <p class="pt-2 flex items-end overflow-hidden">_____________</p>
                 </div>
+                {% endfor %}         
             </div>
         </div>
+    </div>
     </body>
 </html>
