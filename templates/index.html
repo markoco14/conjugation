@@ -29,32 +29,50 @@
             <div class="grow">
                 <p class="text-center text-2xl">{{s_verb}}</p>
                 <hr class="border-black"/>
-                {% for subject in list1  %}
-                <div class="grid grid-cols-6 mt-2">
-                    <p class="col-span-2 pt-2">{{subject}}</p>
-                    <p class="col-span-4 pt-2 flex justify-end items-end overflow-hidden">_____________</p>
-                </div>
-                {% endfor %}
+                <ul>
+                    {% for subject in list1  %}
+                    <li class="grid grid-cols-6 gap-x-2 mt-2 border p-1 rounded-md">
+                        <p class="col-span-2 pt-2">{{subject}}</p>
+                        <p class="col-span-4 pt-2 border-b-2 border-black flex items-end overflow-hidden">
+                            {% if request.query_params.get("answers") == "show"%}
+                            <span class="w-full text-center text-red-500">answer</span>
+                            {% endif %}
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="grow">
                 <p class="text-center text-2xl">{{es_verb}}</p>
                 <hr class="border-black"/>
-                {% for subject in list2  %}
-                <div class="grid grid-cols-6 mt-2">
-                    <p class="col-span-2 pt-2">{{subject}}</p>
-                    <p class="col-span-4 pt-2 flex justify-end items-end overflow-hidden">_____________</p>
-                </div>
-                {% endfor %}
+                <ul>
+                    {% for subject in list2  %}
+                    <li class="grid grid-cols-6 gap-x-2 mt-2 border p-1 rounded-md">
+                        <p class="col-span-2 pt-2">{{subject}}</p>
+                        <p class="col-span-4 pt-2 border-b-2 border-black flex items-end overflow-hidden">
+                            {% if request.query_params.get("answers") == "show"%}
+                            <span class="w-full text-center text-red-500">answer</span>
+                            {% endif %}
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="grow">
                 <p class="text-center text-2xl">{{ies_verb}}</p>
                 <hr class="border-black"/>
-                {% for subject in list3  %}
-                <div class="grid grid-cols-6 mt-2">
-                    <p class="col-span-2 pt-2">{{subject}}</p>
-                    <p class="col-span-4 pt-2 flex justify-end items-end overflow-hidden">_____________</p>
-                </div>
-                {% endfor %}         
+                <ul>
+                    {% for subject in list3  %}
+                    <li class="grid grid-cols-6 gap-x-2 mt-2 border p-1 rounded-md">
+                        <p class="col-span-2 pt-2">{{subject}}</p>
+                        <p class="col-span-4 pt-2 border-b-2 border-black flex items-end overflow-hidden">
+                            {% if request.query_params.get("answers") == "show"%}
+                            <span class="w-full text-center text-red-500">answer</span>
+                            {% endif %}
+                        </p>
+                    </li>
+                    {% endfor %}         
+                </ul>
             </div>
         </div>
     </div>
